@@ -1,16 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
+import Movie from '../src/pages/moviedetail'
 import reportWebVitals from './reportWebVitals';
+import {  BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from '../src/pages/home'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <App>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="information/:movieId/:type" element={<Movie />}/>
+                </Routes>
+            </App>
+        </BrowserRouter>,
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
