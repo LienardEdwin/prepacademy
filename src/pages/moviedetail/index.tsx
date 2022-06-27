@@ -45,7 +45,7 @@ export default function MovieDetail(){
             getFilmById(params.movieId, params.type).then((data:Movie) => setMovie(data));
         }
     }
-    
+
     return movie ?(
         <MainContainer>
             <div>
@@ -92,8 +92,6 @@ export default function MovieDetail(){
                     )
 
                 }
-
-
             </div>
             <div>
                 <Poster data={movie}/>
