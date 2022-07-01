@@ -1,4 +1,4 @@
-const API_TOKEN = 'bc4c32223b952aeeda0169bf10a30277'
+const API_TOKEN = ''
 
 export function getFilmsFromApiWithSearchedText (text: string) {
     const url = 'https://api.themoviedb.org/3/search/multi?api_key=' + API_TOKEN + '&language=fr&query=' + text
